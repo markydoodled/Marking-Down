@@ -1,0 +1,33 @@
+{
+  "originHash" : "b0e9b39a613127f6fb6b8a2edce56865b8fcaa74c96d9ff4d20cb5604bd2bf9b",
+  "pins" : [
+    {
+      "identity" : "documentkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/danielsaidi/DocumentKit",
+      "state" : {
+        "revision" : "84f185e2383151887538c33b842a7c14ad8a1a9d",
+        "version" : "0.4.0"
+      }
+    },
+    {
+      "identity" : "networkimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/gonzalezreal/NetworkImage",
+      "state" : {
+        "revision" : "7aff8d1b31148d32c5933d75557d42f6323ee3d1",
+        "version" : "6.0.0"
+      }
+    },
+    {
+      "identity" : "swift-markdown-ui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/gonzalezreal/swift-markdown-ui.git",
+      "state" : {
+        "revision" : "9a8119b37e09a770367eeb26e05267c75d854053",
+        "version" : "2.3.1"
+      }
+    }
+  ],
+  "version" : 3
+}
