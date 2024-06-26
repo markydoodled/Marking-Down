@@ -21,7 +21,7 @@ struct Marking_DownDocument: FileDocument {
         self.text = text
     }
 
-    static var readableContentTypes: [UTType] { [.markingdownText, .text] }
+    static var readableContentTypes: [UTType] { [.markingdownText, .text, .plainText] }
 
     init(configuration: ReadConfiguration) throws {
         guard let data = configuration.file.regularFileContents,

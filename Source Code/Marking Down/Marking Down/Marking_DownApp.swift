@@ -19,6 +19,7 @@ struct Marking_DownApp: App {
         #endif
         .commands {
             TextEditingCommands()
+            ToolbarCommands()
         }
     }
 }
