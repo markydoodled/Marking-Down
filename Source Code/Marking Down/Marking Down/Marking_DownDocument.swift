@@ -17,11 +17,11 @@ extension UTType {
 struct Marking_DownDocument: FileDocument {
     var text: String
 
-    init(text: String = "") {
+    init(text: String = "Hello World!") {
         self.text = text
     }
 
-    static var readableContentTypes: [UTType] { [.markingdownText, .text, .plainText] }
+    static var readableContentTypes: [UTType] { [.markingdownText, .text, .plainText, .utf8PlainText, .utf16PlainText] }
 
     init(configuration: ReadConfiguration) throws {
         guard let data = configuration.file.regularFileContents,

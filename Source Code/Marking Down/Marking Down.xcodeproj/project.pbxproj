@@ -7,20 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D525B8D52BE26FA200569F63 /* DocumentKit in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = D525B8D42BE26FA200569F63 /* DocumentKit */; };
-		D525B8D82BE26FF500569F63 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = D525B8D72BE26FF500569F63 /* MarkdownUI */; };
 		D525B8DA2BE2709A00569F63 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D525B8D92BE2709A00569F63 /* Settings.bundle */; };
-		D525B8DC2BE270A600569F63 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D525B8DB2BE270A600569F63 /* SettingsView.swift */; };
 		D57E01C92BC587A50061DFC7 /* Marking_DownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57E01C82BC587A50061DFC7 /* Marking_DownApp.swift */; };
 		D57E01CB2BC587A50061DFC7 /* Marking_DownDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57E01CA2BC587A50061DFC7 /* Marking_DownDocument.swift */; };
 		D57E01CD2BC587A50061DFC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57E01CC2BC587A50061DFC7 /* ContentView.swift */; };
 		D57E01CF2BC587A80061DFC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D57E01CE2BC587A80061DFC7 /* Assets.xcassets */; };
 		D57E01D42BC587A80061DFC7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D57E01D32BC587A80061DFC7 /* Preview Assets.xcassets */; };
+		D5DEEDFA2C2C6B0B00B33270 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = D5DEEDF92C2C6B0B00B33270 /* MarkdownUI */; };
+		D5DEEDFD2C2C6B1800B33270 /* DocumentKit in Frameworks */ = {isa = PBXBuildFile; productRef = D5DEEDFC2C2C6B1800B33270 /* DocumentKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D525B8D92BE2709A00569F63 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		D525B8DB2BE270A600569F63 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D57E01C52BC587A50061DFC7 /* Marking Down.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marking Down.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57E01C82BC587A50061DFC7 /* Marking_DownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marking_DownApp.swift; sourceTree = "<group>"; };
 		D57E01CA2BC587A50061DFC7 /* Marking_DownDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marking_DownDocument.swift; sourceTree = "<group>"; };
@@ -36,8 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D525B8D52BE26FA200569F63 /* DocumentKit in Frameworks */,
-				D525B8D82BE26FF500569F63 /* MarkdownUI in Frameworks */,
+				D5DEEDFD2C2C6B1800B33270 /* DocumentKit in Frameworks */,
+				D5DEEDFA2C2C6B0B00B33270 /* MarkdownUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,7 +69,6 @@
 				D57E01D12BC587A80061DFC7 /* Marking_Down.entitlements */,
 				D57E01D22BC587A80061DFC7 /* Preview Content */,
 				D525B8D92BE2709A00569F63 /* Settings.bundle */,
-				D525B8DB2BE270A600569F63 /* SettingsView.swift */,
 			);
 			path = "Marking Down";
 			sourceTree = "<group>";
@@ -101,8 +98,8 @@
 			);
 			name = "Marking Down";
 			packageProductDependencies = (
-				D525B8D42BE26FA200569F63 /* DocumentKit */,
-				D525B8D72BE26FF500569F63 /* MarkdownUI */,
+				D5DEEDF92C2C6B0B00B33270 /* MarkdownUI */,
+				D5DEEDFC2C2C6B1800B33270 /* DocumentKit */,
 			);
 			productName = "Marking Down";
 			productReference = D57E01C52BC587A50061DFC7 /* Marking Down.app */;
@@ -133,8 +130,8 @@
 			);
 			mainGroup = D57E01BC2BC587A50061DFC7;
 			packageReferences = (
-				D525B8D32BE26FA200569F63 /* XCRemoteSwiftPackageReference "DocumentKit" */,
-				D525B8D62BE26FF500569F63 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
+				D5DEEDF82C2C6B0B00B33270 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
+				D5DEEDFB2C2C6B1800B33270 /* XCRemoteSwiftPackageReference "DocumentKit" */,
 			);
 			productRefGroup = D57E01C62BC587A50061DFC7 /* Products */;
 			projectDirPath = "";
@@ -164,7 +161,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D57E01CB2BC587A50061DFC7 /* Marking_DownDocument.swift in Sources */,
-				D525B8DC2BE270A600569F63 /* SettingsView.swift in Sources */,
 				D57E01C92BC587A50061DFC7 /* Marking_DownApp.swift in Sources */,
 				D57E01CD2BC587A50061DFC7 /* ContentView.swift in Sources */,
 			);
@@ -329,7 +325,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MSJ.Marking-Down";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -374,7 +370,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MSJ.Marking-Down";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -407,34 +403,34 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D525B8D32BE26FA200569F63 /* XCRemoteSwiftPackageReference "DocumentKit" */ = {
+		D5DEEDF82C2C6B0B00B33270 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gonzalezreal/swift-markdown-ui";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.1;
+			};
+		};
+		D5DEEDFB2C2C6B1800B33270 /* XCRemoteSwiftPackageReference "DocumentKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/danielsaidi/DocumentKit";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.3.0;
-			};
-		};
-		D525B8D62BE26FF500569F63 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/gonzalezreal/swift-markdown-ui.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.3.0;
+				minimumVersion = 0.4.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D525B8D42BE26FA200569F63 /* DocumentKit */ = {
+		D5DEEDF92C2C6B0B00B33270 /* MarkdownUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D525B8D32BE26FA200569F63 /* XCRemoteSwiftPackageReference "DocumentKit" */;
-			productName = DocumentKit;
-		};
-		D525B8D72BE26FF500569F63 /* MarkdownUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D525B8D62BE26FF500569F63 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;
+			package = D5DEEDF82C2C6B0B00B33270 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;
 			productName = MarkdownUI;
+		};
+		D5DEEDFC2C2C6B1800B33270 /* DocumentKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5DEEDFB2C2C6B1800B33270 /* XCRemoteSwiftPackageReference "DocumentKit" */;
+			productName = DocumentKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

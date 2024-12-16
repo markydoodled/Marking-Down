@@ -13,40 +13,60 @@ import MarkdownUI
 struct ContentView: View {
     @Binding var document: Marking_DownDocument
     @State var showingSettings = false
+    @Environment(\.undoManager) var undoManager
     var body: some View {
         HStack {
-            TextEditor(text: $document.text)
-                .padding()
-                .font(.monospaced)
-            Divider()
-            Markdown {
-                document.text
+            GroupBox {
+                VStack {
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        TextEditor(text: $document.text)
+                            .monospaced()
+                            .scrollContentBackground(.hidden)
+                        Spacer()
+                    }
+                    Spacer()
+                }
             }
-            .padding()
+            Divider()
+            GroupBox {
+                ScrollView {
+                    VStack {
+                        HStack {
+                            Markdown {
+                                document.text
+                            }
+                            Spacer()
+                        }
+                        Spacer()
+                    }
+                }
+            }
         }
         .padding()
-        .toolbar {
-            ToolbarItem(id: "share-doc", placement: .primaryAction) {
-                ShareLink()
-            }
+        .toolbar(id: "quick-actions") {
             ToolbarItem(id: "settings", placement: .primaryAction) {
                 Button(action: {showingSettings = true}) {
-                    Image(systemImage: "gearshape")
+                    Image(systemName: "gearshape")
+                }
+                .sheet(isPresented: $showingSettings) {
+                    settings
                 }
             }
             ToolbarItem(id: "undo", placement: .secondaryAction) {
-                Button(action: {}) {
-                    Image(systemName: "") 
+                Button(action: {undoManager?.undo()}) {
+                    Image(systemName: "arrow.uturn.backward.circle")
                 }
             }
             ToolbarItem(id: "redo", placement: .secondaryAction) {
-                Button(action: {}) {
-                    Image(systemName: "") 
+                Button(action: {undoManager?.redo()}) {
+                    Image(systemName: "arrow.uturn.forward.circle")
                 }
             }
             ToolbarItem(id: "copy-text", placement: .secondaryAction) {
                 Button(action: {}) {
-                    Image(systemName: "") 
+                    Image(systemName: "text.badge.plus")
                 }
             }
         }
@@ -58,13 +78,23 @@ struct ContentView: View {
                 Section {
                     
                 } header: {
-                    Label("Editor", systemImage: "")
+                    Label("Editor", systemImage: "pencil")
                 }
                 Section {
-                    LabelledContent("Version", value: "1.0")
-                    LabelledContent("Build", value: "1") 
+                    LabeledContent("Version", value: "1.0")
+                    LabeledContent("Build", value: "1")
                 } header: {
-                    Label("Misc.", systemImage: "")
+                    Label("Misc.", systemImage: "info.circle")
+                }
+            }
+            .navigationTitle("Settings")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden()
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button(action: {showingSettings = false}) {
+                        Text("Done")
+                    }
                 }
             }
         }

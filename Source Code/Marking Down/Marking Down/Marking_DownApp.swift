@@ -6,7 +6,9 @@
 //
 
 import SwiftUI
+#if os(iOS)
 import DocumentKit
+#endif
 
 @main
 struct Marking_DownApp: App {
